@@ -1,1 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+}
+
+html,
+body {
+	height: 100%;
+	background-image: url("https://www.triggdigital.com/wp-content/uploads/2020/01/shutterstock_95668048.jpg");  
+    background-size: 100% ;  
+    background-size: cover;  
+	color: #E53D00;
+}
+body {
+	margin-bottom: 0;
+	margin-top: 0;
+	font-family: 'Satisfy', cursive;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+html,
+body,
+app-root {
+	height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+	font-family: 'Satisfy', cursive;
+}
+
+p {
+	overflow-wrap: break-word;
+	hyphens: auto;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: "Helvetica Neue", sans-serif; }

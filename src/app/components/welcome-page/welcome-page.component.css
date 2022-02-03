@@ -1,0 +1,23 @@
+.page {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 60%;
+    height: 100%;
+}
+
+button {
+    margin: 5%;
+    padding: 10%;
+    height: 30%;
+    width: 80%;
+    border-radius: 5px;
+}

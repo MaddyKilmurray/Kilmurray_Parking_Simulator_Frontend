@@ -1,0 +1,20 @@
+<div class="page">
+    <div class="form">
+        <form class="entryForm" [formGroup]="entryForm" *ngIf="showForm">
+            <p class="label">Please enter your car details</p>
+            <mat-form-field class="example-will-width" appearance="fill">
+                <mat-label>License Plate</mat-label>
+                <input type="text" matInput formControlName="licencePlate">
+                <mat-error *ngIf="licencePlate.invalid && licencePlate.touched">
+                    Please enter a valid licence plate number.
+                </mat-error>
+            </mat-form-field>
+        </form>
+
+        <button class="submit" (click)="submitForm()" *ngIf="showForm">
+            <p>Submit</p>
+        </button>
+
+        <app-parked-confirmation *ngIf="!showForm" [qrCode]="this.qrCode"></app-parked-confirmation>
+    </div>
+</div>

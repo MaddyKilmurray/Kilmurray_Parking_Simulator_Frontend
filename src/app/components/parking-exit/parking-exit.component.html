@@ -1,0 +1,20 @@
+<div class="page">
+    <div class="form">
+        <form class="exitForm" [formGroup]="exitForm" *ngIf="showForm">
+            <p class="label">Please provide QR code</p>
+            <!-- <mat-form-field class="example-will-width" appearance="fill">
+                <mat-label>License Plate</mat-label>
+                <input type="text" matInput formControlName="licencePlate">
+                <mat-error *ngIf="licencePlate.invalid && licencePlate.touched">
+                    Please enter a valid licence plate number.
+                </mat-error>
+            </mat-form-field> -->
+        </form>
+
+        <button class="submit" (click)="submitForm()" *ngIf="showForm">
+            <p>Submit</p>
+        </button>
+
+        <app-exit-confirmation *ngIf="!showForm"></app-exit-confirmation>
+    </div>
+</div>

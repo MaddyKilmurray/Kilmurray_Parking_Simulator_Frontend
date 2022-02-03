@@ -1,0 +1,30 @@
+.page {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width:60%;
+    background-color: #33c5ff;
+    padding: 10%;
+    border-radius: 10px;
+}
+
+.exitForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width:100%;
+    background-color: #33c5ff;
+}
+
+.example-will-width, .submit {
+    margin: 5%;
+}

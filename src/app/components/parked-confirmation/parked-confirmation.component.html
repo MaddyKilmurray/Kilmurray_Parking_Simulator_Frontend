@@ -1,0 +1,10 @@
+<div class="page">
+    <div class="confirmation">
+        <p>Thank you! Here is your QR code.</p>
+        <p>The code is used to verify your parking time, so please keep a copy!</p>
+        <p>Please proceed to the carpark.</p>
+        <img [src]="qrCode">
+
+        <button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Start again</button>
+    </div>
+</div>

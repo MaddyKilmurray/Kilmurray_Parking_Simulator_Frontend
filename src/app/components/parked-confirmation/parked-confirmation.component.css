@@ -1,0 +1,15 @@
+.page, .confirmation {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+
+.confirmation {
+    flex-direction: column;
+    width: 60%;
+}
+
+img {
+    margin: 5%;
+}

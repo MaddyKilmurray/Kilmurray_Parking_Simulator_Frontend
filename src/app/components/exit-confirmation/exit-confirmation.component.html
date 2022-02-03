@@ -1,0 +1,9 @@
+<div class="page">
+    <div class="charge" *ngIf="chargeRequired">
+        <p>Please proceed to the ticket office to pay for your parking.</p>
+    </div>
+    <div class="nocharge" *ngIf="!chargeRequired">
+        <p>Thank you!</p>
+        <p>Have a great day!</p>
+    </div>
+</div>
