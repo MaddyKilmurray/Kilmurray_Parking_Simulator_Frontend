@@ -1,20 +1,8 @@
 <div class="page">
     <div class="form">
 
-        <form class="exitForm" [formGroup]="exitForm" *ngIf="showForm">
-            <div class="formGroup">
-                <label>QR Code</label>
-                <input class="form-control" type="file" formControlName="qrCode">
-                <div *ngIf="qrCode.invalid && qrCode.touched">
-                    Please upload a valid file.
-                </div>
-            </div>
-        </form>
+        <app-qrscan></app-qrscan>
 
-        <button class="submit" (click)="submitForm()" *ngIf="showForm">
-            <p>Read QR code</p>
-        </button>
-
-        <app-exit-confirmation *ngIf="!showForm"></app-exit-confirmation>
+        <!-- <app-exit-confirmation *ngIf="!showForm"></app-exit-confirmation> -->
     </div>
 </div>

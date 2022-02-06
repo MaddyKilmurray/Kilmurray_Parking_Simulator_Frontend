@@ -15,8 +15,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
+import {MatIconModule} from '@angular/material/icon'
 
 import { DatePipe } from '@angular/common';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
+import { QrscanComponent } from './qrscan/qrscan.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,8 @@ import { DatePipe } from '@angular/common';
     ParkingEntryComponent,
     ParkedConfirmationComponent,
     ParkingExitComponent,
-    ExitConfirmationComponent
+    ExitConfirmationComponent,
+    QrscanComponent
   ],
   imports: [
     BrowserModule,
@@ -34,8 +38,10 @@ import { DatePipe } from '@angular/common';
     MatInputModule,
     MatButtonModule,
     MatFormFieldModule,
+    MatIconModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ZXingScannerModule
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]

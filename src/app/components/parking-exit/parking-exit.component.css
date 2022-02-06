@@ -28,3 +28,7 @@
 .example-will-width, .submit {
     margin: 5%;
 }
+
+.file-input {
+    display: none;
+  }

@@ -23,5 +23,8 @@ export class ParkingServiceService {
     return this.http.post<any>(this.baseUrl + "/entry", body);
   }
 
+  exitParkingLot(qrCode: string): Observable<boolean> {
+    return this.http.get<boolean>(this.baseUrl + qrCode);
+  }
   
 }

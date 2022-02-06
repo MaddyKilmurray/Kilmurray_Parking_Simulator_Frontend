@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
@@ -12,12 +13,15 @@ export class ParkingExitComponent implements OnInit {
 
   chargeRequired:Boolean;
 
-  qrCode:FormControl
+  qrCode:FormControl;
   exitForm:FormGroup;
 
-  constructor() { 
+  fileName:string;
+
+  constructor(private http:HttpClient) { 
     this.showForm = true;
     this.chargeRequired = true;
+    this.fileName = "";
 
     this.qrCode = new FormControl('',[Validators.required]);
     this.exitForm = new FormGroup({
@@ -26,10 +30,6 @@ export class ParkingExitComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  }
-
-  submitForm() : void {
-    
   }
 
 }
