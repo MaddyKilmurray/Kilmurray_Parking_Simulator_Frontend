@@ -1,18 +1,11 @@
 <div class="kt-portlet__body">
     <zxing-scanner *ngIf="scannerEnabled" #qrscanner (scanSuccess)="scanSuccessHandler($event)">
     </zxing-scanner>
-    <button (click)="enableScanner()" *ngIf="!scannerEnabled" type="button" class="btn btn-success">read
-        another</button>
 </div>
 
 <div class="kt-callout__content">
     <div class="chargeCheck" *ngIf="chargeCheck">
         <a class="title">Please scan your QR code </a>
-        <p></p>
-        <a class="content">
-            {{information}}
-        </a>
-        <p></p>
     </div>
 
     <div class="chargeMessage" *ngIf="!chargeCheck">
@@ -23,6 +16,8 @@
             <p>Thank you!</p>
             <p>Have a great day!</p>
         </div>
+
+        <button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Return to Home Page</button>
     </div>
 
 </div>

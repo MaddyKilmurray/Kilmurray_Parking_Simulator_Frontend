@@ -3,6 +3,7 @@ import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/cor
 import { BarcodeFormat } from '@zxing/library';
 import { ZXingScannerComponent } from '@zxing/ngx-scanner';
 
+
 @Component({
   selector: 'app-qrscan',
   templateUrl: './qrscan.component.html',
@@ -19,15 +20,18 @@ export class QrscanComponent implements OnInit {
 
   chargeCheck:boolean;
   chargeRequired:boolean;
+  codedQRinfo: string;
   
   constructor(private parkingService:ParkingServiceService) {
     var qrInput:string = "qrInput";
 
     this.chargeCheck = true;
     this.chargeRequired = true;
+    this.codedQRinfo = "";
   }
 
   ngOnInit(): void {
+
     console.log("Scanner - Autostart");
 
     this.qrscanner.enable;
@@ -44,7 +48,8 @@ export class QrscanComponent implements OnInit {
   public scanSuccessHandler($event: any) {
     this.scannerEnabled = false;  
     this.information = $event;
-    // this.verifyQRcode(this.information);
+    this.codedQRinfo = ("https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + this.information).replace(/\s/g, "");
+    this.verifyQRcode(this.codedQRinfo);
   }
   
   public enableScanner() {
@@ -64,6 +69,5 @@ export class QrscanComponent implements OnInit {
       this.chargeCheck = false;
     })
   }
-
 
 }

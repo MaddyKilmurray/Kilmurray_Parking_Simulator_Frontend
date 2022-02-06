@@ -5,13 +5,13 @@
             <mat-form-field class="example-will-width" appearance="fill">
                 <mat-label>License Plate</mat-label>
                 <input type="text" matInput formControlName="licencePlate">
-                <mat-error *ngIf="licencePlate.invalid && licencePlate.touched">
+                <mat-error *ngIf="licencePlate.hasError('invalidRegistration') || licencePlate.invalid && licencePlate.touched">
                     Please enter a valid licence plate number.
                 </mat-error>
             </mat-form-field>
         </form>
 
-        <button class="submit" (click)="submitForm()" *ngIf="showForm">
+        <button class="submit" (click)="submitForm()" *ngIf="showForm" [disabled]="entryForm.invalid">
             <p>Submit</p>
         </button>
 
