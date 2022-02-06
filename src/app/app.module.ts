@@ -8,7 +8,6 @@ import { WelcomePageComponent } from './components/welcome-page/welcome-page.com
 import { ParkingEntryComponent } from './components/parking-entry/parking-entry.component';
 import { ParkedConfirmationComponent } from './components/parked-confirmation/parked-confirmation.component';
 import { ParkingExitComponent } from './components/parking-exit/parking-exit.component';
-import { ExitConfirmationComponent } from './components/exit-confirmation/exit-confirmation.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
@@ -28,7 +27,6 @@ import { QrscanComponent } from './qrscan/qrscan.component';
     ParkingEntryComponent,
     ParkedConfirmationComponent,
     ParkingExitComponent,
-    ExitConfirmationComponent,
     QrscanComponent
   ],
   imports: [

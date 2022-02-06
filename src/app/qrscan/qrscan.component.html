@@ -1,13 +1,10 @@
-<div class="kt-portlet__body">
-    <zxing-scanner *ngIf="scannerEnabled" #qrscanner (scanSuccess)="scanSuccessHandler($event)">
-    </zxing-scanner>
-</div>
-
 <div class="kt-callout__content">
     <div class="chargeCheck" *ngIf="chargeCheck">
-        <a class="title">Please scan your QR code </a>
-    </div>
+        <h2>Please scan your QR code </h2>
 
+        <h3>If you require assistance with scanning your QR code, please proceed to the ticket office and we can assist you.</h3>
+    </div>
+    
     <div class="chargeMessage" *ngIf="!chargeCheck">
         <div class="chargeSection" *ngIf="chargeRequired">
             <p>Please proceed to the ticket office to pay for your parking.</p>
@@ -16,8 +13,13 @@
             <p>Thank you!</p>
             <p>Have a great day!</p>
         </div>
-
-        <button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Return to Home Page</button>
+        
+        <button class="button-6" role="button" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Return to Home Page</button>
     </div>
+    
+</div>
 
+<div class="kt-portlet__body">
+    <zxing-scanner *ngIf="scannerEnabled" #qrscanner (scanSuccess)="scanSuccessHandler($event)">
+    </zxing-scanner>
 </div>

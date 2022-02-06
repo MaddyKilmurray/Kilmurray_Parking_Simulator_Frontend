@@ -1,6 +1,4 @@
 import { ParkingExitComponent } from './components/parking-exit/parking-exit.component';
-import { ExitConfirmationComponent } from './components/exit-confirmation/exit-confirmation.component';
-import { ParkedConfirmationComponent } from './components/parked-confirmation/parked-confirmation.component';
 import { ParkingEntryComponent } from './components/parking-entry/parking-entry.component';
 import { WelcomePageComponent } from './components/welcome-page/welcome-page.component';
 import { NgModule } from '@angular/core';
@@ -18,10 +16,6 @@ const routes: Routes = [
   {
     path: 'exit',
     component: ParkingExitComponent
-  },
-  {
-    path: 'goodbye',
-    component: ExitConfirmationComponent
   }
 ];
 

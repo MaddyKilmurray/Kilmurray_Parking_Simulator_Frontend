@@ -1,19 +1,23 @@
 <div class="page">
     <div class="form">
         <form class="entryForm" [formGroup]="entryForm" *ngIf="showForm">
-            <p class="label">Please enter your car details</p>
+            <h2 class="label">Please enter your licence plate details</h2>
             <mat-form-field class="example-will-width" appearance="fill">
-                <mat-label>License Plate</mat-label>
+                <mat-label>Licence Plate</mat-label>
                 <input type="text" matInput formControlName="licencePlate">
-                <mat-error *ngIf="licencePlate.hasError('invalidRegistration') || licencePlate.invalid && licencePlate.touched">
+                <mat-error
+                    *ngIf="licencePlate.hasError('invalidRegistration') || licencePlate.invalid && licencePlate.touched">
                     Please enter a valid licence plate number.
                 </mat-error>
             </mat-form-field>
-        </form>
 
-        <button class="submit" (click)="submitForm()" *ngIf="showForm" [disabled]="entryForm.invalid">
-            <p>Submit</p>
-        </button>
+
+            <button class="button-6" role="button" (click)="submitForm()" (keydown.enter)="submitForm()" *ngIf="showForm"
+                [disabled]="entryForm.invalid">
+                <p>Submit</p>
+            </button>
+
+        </form>
 
         <app-parked-confirmation *ngIf="!showForm" [qrCode]="this.qrCode"></app-parked-confirmation>
     </div>
