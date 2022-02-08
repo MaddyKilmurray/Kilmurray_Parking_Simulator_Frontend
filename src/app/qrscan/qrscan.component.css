@@ -5,3 +5,14 @@ p, h2, h3 {
 h2 {
     font-size: 200%;
 }
+
+.kt-callout__content, .chargeMessage, .kt-portlet__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+button {
+    margin: 5%;
+}

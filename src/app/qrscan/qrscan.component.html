@@ -7,11 +7,15 @@
     
     <div class="chargeMessage" *ngIf="!chargeCheck">
         <div class="chargeSection" *ngIf="chargeRequired">
-            <p>Please proceed to the ticket office to pay for your parking.</p>
+            <h2>Please proceed to the ticket office to pay for your parking.</h2>
         </div>
         <div class="chargeSection" *ngIf="!chargeRequired">
-            <p>Thank you!</p>
-            <p>Have a great day!</p>
+            <h2>Thank you!</h2>
+            <h2>Have a great day!</h2>
+        </div>
+        <div class="chargeSection" *ngIf="notFound">
+            <h2>Parking record could not be found.</h2>
+            <h2>Please report to the ticket office for assistance.</h2>
         </div>
         
         <button class="button-6" role="button" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Return to Home Page</button>
@@ -19,7 +23,9 @@
     
 </div>
 
-<div class="kt-portlet__body">
-    <zxing-scanner *ngIf="scannerEnabled" #qrscanner (scanSuccess)="scanSuccessHandler($event)">
+<div class="kt-portlet__body" *ngIf="chargeCheck">
+    <zxing-scanner #qrscanner (scanSuccess)="scanSuccessHandler($event)">
     </zxing-scanner>
+
+    <button class="button-6" role="button" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Return to Home Page</button>
 </div>

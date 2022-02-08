@@ -7,7 +7,7 @@
                 <input type="text" matInput formControlName="licencePlate">
                 <mat-error
                     *ngIf="licencePlate.hasError('invalidRegistration') || licencePlate.invalid && licencePlate.touched">
-                    Please enter a valid licence plate number.
+                    Please enter a valid licence plate number, with no spaces.
                 </mat-error>
             </mat-form-field>
 
